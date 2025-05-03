@@ -14,5 +14,7 @@ func main() {
 	for i := range s {
 		fmt.Printf("%d %v\n", i, s[i])
 	}
-	fmt.Println(cap(s))
+	for _, v := range s {
+		fmt.Printf("value: %v\n", v)
+	}
 }
