@@ -1,20 +1,37 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	m := make(map[string]int)
-	m["a"] = 1
-	m["b"] = 2
-	fmt.Println(m["a"])
-	fmt.Println(len(m))
-	delete(m, "a")
-	fmt.Println(m)
-	v, ok := m["a"]
-	fmt.Println(v, ok)
-	for k, v := range m {
-		fmt.Println(k, v)
-	}
+	var mapsData = make(map[string]string)
+	// string map
+	mapsData["name"] = "Shariful"
+	fmt.Println(mapsData)
+
+	//int map
+	var intMap = make(map[string]int)
+	intMap["price"] = 32
+
+	// dynamic value map
+
+	var dynamicMap = make(map[string]interface{})
+
+	dynamicMap["name"] = "Sharif"
+
+	dynamicMap["roll"] = 32
+
+	// delete element
+
+	delete(dynamicMap, "roll")
+
+	// clear map
+
+	clear(dynamicMap)
+
+	// check is that ok or not
+
+	value, ok := intMap["roll"]
+
+	fmt.Printf("%s %v", value, ok)
+
 }

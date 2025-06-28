@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var a int = 10
-	var b float32 = 5.6789
-	var c string = "Hello World"
-	var d bool = true
-	const e int = 45
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(c)
-	fmt.Println(d)
-	fmt.Println(e)
+	var str string = "MD Shariful Islam"
+	var num int = 4
+	var bol bool = true
+	var a, b int = 1, 2
+	fmt.Println(a, b)
+	fmt.Println(str)
+	fmt.Println(num)
+	fmt.Println(bol)
+	i := 5
+	fmt.Print(i)
+
 }

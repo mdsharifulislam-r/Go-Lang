@@ -2,19 +2,15 @@ package main
 
 import (
 	"fmt"
+	"slices"
 )
 
 func main() {
-	var s []string
-	fmt.Println(s) // nil
-	s = make([]string, 3)
-	fmt.Println(s)
-	s = append(s, "a", "b")
-	fmt.Println(s)
-	for i := range s {
-		fmt.Printf("%d %v\n", i, s[i])
-	}
-	for _, v := range s {
-		fmt.Printf("value: %v\n", v)
-	}
+	a := [3]string{"a", "b"}
+
+	b := make([]string, len(a))
+	copy(b, a)
+
+	fmt.Print(b)
+
 }

@@ -1,13 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var a [5]int
-	var b = [3]int{1, 2, 3}
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(len(a))
-	fmt.Println(len(b))
+	a[3] = 5
+	fmt.Printf("a:%v", a)
 
+	b := [5]int{1, 2, 4, 5}
+	fmt.Println(b)
+
+	c := [...]int{1, 2, 4, 5}
+
+	fmt.Println(c)
 }
